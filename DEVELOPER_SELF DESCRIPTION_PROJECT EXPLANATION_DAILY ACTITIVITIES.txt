@@ -1,0 +1,57 @@
+
+HI,
+Good morning! I am paramesh, having 3+ years of experience in IT industry working with DWH and BI stream.I am working on MSBI for the last 3 years.
+In my tenure I played two major roles.a)Module Lead b)Software Engineer.
+I am a Btech qualified candidate with 75% aggregation in academics and even I got good percentages in my earlier qualifications(specify if they are good with institution name).
+Worked with various other tools and technologies along with MSBI such as VB Script, Sqlserver, Teradata and Versioning tool TFS. I have some knowledge on scheduling process, control M and Sqlserver Agent
+scheduling tools. 
+My responsibilities are getting the documents such as Business, HLD,LLD etc...through portals[Sharepoit/Team Foundation Server/FTP] or emails and understanding them to work on or for clarifications. Creating and manipulating packages based on the documents
+and Testing them with Data Validation rules.Answering adhoc requests and working on test defects and production issues. I am having good understanding on Datawarehousing and Data Model fundamentals.
+Recently trained on Sqlserver 2016 as part of project updgradation.
+This is very brief about me.
+
+Retail Project Explanation:
+1stpoint:
+
+Currently I am working on a retail project where my customer is AMSI Land Scaping located at Newyark,USA.Their major business is manufacturing various landscape scenes for different real world events such as railroads,
+houses and plantation, doll houses, world iconic and important manuments etc...They have many manufacturing units and they sell their products through three channels .
+ The first one is retailer, second one direct outlet and the third one is Online.
+
+2nd Point:
+Their objective is to have a strategic and tactic analytical system for the analysis of manufacturing units and sales units.
+
+4tyh Poing:
+I participated in this project in a DataMart or Application Area called "Inventory and Manufacturing " Analysis.
+In this project the warehouse is Oracle which is in Galaxy schema and my application is in SnowFlake schema where I have two fact tables and around 12 dimensions.
+They follow bootom up approach of DWH and using Agile life cycle methodology for project implementation.
+
+We prepared packages for DImension and Fact loaing by following dimensional modeling rules based on the HLD and LLD documents of the customers.
+Used many transforms, tasks and  constructs of SSIS depending on business logic.Performing Data Validation/ Unit testing post creation of package.
+Delivering packages, configuration files and Unit test documents to the customers according their conventional method such as keeping in TFS or Shrepoint Server or EMAIL.
+
+In this project the ETL flow looks like below.
+a) Dimensions load from PROJECT_RETAIL_DB
+b)Fact Load from Operational Systems with Staging Area
+
+Draw the diagram and explain
+
+===========================
+
+
+
+
+Daily Activities:
+============
+
+As soon as I enter into office I open my desktop/Laptop, connect to VPN for customer network and then see my emails for new assignments or change requests or any other kind of requests and meetings.
+I will work on the given documents.If already given we work on those documents.
+
+SometimesI work on fresh applications, sometimes on change requests, some times on Test defects and production issues. Even customer adhoc request answered on the fly.
+
+If the work is done, delivering the required documents to the customer through their required communication channel [Web portal/ versioning tool / email/ shared folder]
+
+
+
+
+
+
