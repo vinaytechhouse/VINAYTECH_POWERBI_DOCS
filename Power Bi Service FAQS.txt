@@ -1,0 +1,778 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+We can create a report in Power BI Service, how is it diff from Desktop?
+
+PBI Service is not having Transformations, Modeling and Security creation.
+Also it has limited support to data sources, custom languages [Python, R etc.]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What kind of Cloud Service is Power BI Service?
+
+SaaS [Software as Service]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Can you define in single line Power BI Desktop and Service Difference?
+
+Power BI Desktop is for Report Creation, whereas Power BI Service is for Creation and Management of the reports and dashboards.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What are the management options does Power BI Service Support?
+
+Many options
+
+a) Reports and Dashbords organization in workspaces
+b) Sharing reports  dashboards
+c) Subscription of reports  dashboards
+c) Alerting tiles 
+d) Refresh data [on-emand, scheduled refresh, incremental refresh]. Gateways required.
+e) Powerful Data Model creation with Machine Learning and other methods to re use [ Data flow]
+f)  Create APP space to connect and work from Mobiles / tabs etc...
+g) Packing the content to colloborate team and publish team work [Content Pack, Appspaces etc.]
+h) Memory management
+i) Browsing of data in the workbooks and reports
+j) Export reports in the required formats [ limited]
+k) You can take Embedding settings to embed Sharepoint / Website / Blog etc...
+l) Live Streaming Datasets establishment.
+j) RLS users specification
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is workspace ?
+
+Simply working area.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What exatly a workspace holds?
+
+Required reports, dashboards, workbooks, datasets, and data flows.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How workspace and appspace are different?
+
+Workspace is working area, whereas appspace is the area where required reports, dashboards, or workbooks shared from
+workspace. So that people can access via web / mobile / tab.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How can we access workspaces and appsapces in mobiles / tabs?
+
+By using Power BI App.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How do we maintain multiple environment reports [Dev / Test / SIT / UAT / Prod] in real-time?
+
+Different companies in different ways
+
+a) One premimum / pro account, multiple workspaces
+	Development Team : One workspace
+	Testing Team: Another workspace
+	etc.
+b) Multiple accounts for multiple environments
+	
+	Development one pro/ set of pro / premium account
+	Testing  one pro / set of pro / premium account
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What exactly we do in an environment [Dev / Test / Prod] apart from reports or dashboards uploading?
+
+a) Providing users for RLS [optional]
+b) Gateway Configuration and Adding to Dataset [ Dev / Test / Prod dataset]
+c)  Add the report to content pack / app.
+
+Practicals Implemented in the classroom:
+
+a) Explained complete app.powerbi.com overview [different options]
+b) Created workspace with image and other settings
+c) Using GetData, added dashboard, report, workbook, and dataset.
+d) Created report in the Power BI Service using existing dataset.
+e) Moved to workspace settings and explained [ logo, workspace users, template option,one drive etc...]
+f)  Access [who all can work on it and what kind of operation they can perform]
+	Here we have 4 roles [a)Admin b) Member c) Contributor d) Viewer]
+g) View [ List (default view), Lineage [ left to right show, source to till report /dashboard]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is Appspce?
+
+
+This has required elements of workspace, so that 
+
+a) contributors can take copies
+b) customers can take copies and browse
+c) collaborators can collaborate.
+
+This is accessible at Browser and Mobile/Tab. 
+
+
+Additional Practice:
+
+a) Created Two Reports [First One without RLS and Second One with RLS] and published to workspace and then appspace updated.
+
+b) Browsed the reports using Mobile App
+   Observation:
+   No RLS report showing data
+   RLS report restricting data
+ 
+ c) For RLS report at Power Bi Service, at Dataset-->Security--> Added user,then appspace updated.
+
+d)Browsed the reports using Mobile App
+   Observation:
+   No RLS report showing data
+   RLS report connected user [security added] data
+=========================================================================================
+Appspace Questions
+=========================================================================================
+Q: How many appspaces a workspace can contain?
+
+Only one
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q: What type of report exporting we have in app?
+
+PPT and PDF
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q: Can we generate a QR Code at app level and what is the advantage?
+Yes, we can
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+By scaning the QR code, we can directly access the report from mobile device.
+
+Q: Can we subscribe from app?
+
+Yes
+
+Q: Can we share to teams in the app?
+
+Yes
+
+Q: Can we get embed optios from the apps? 
+ Yes
+
+Q: Can we comment from the apps?
+
+Yes
+
+Q: 
+
+Q: Can we share and subscribe from app?
+
+Yes
+
+Q: Can we take a copy of the report in my personal workspace?
+
+Yes
+
+Q: How to copy a report from one workspace to other?
+
+Go to the Report--> click ellipse--> Save a copy--> Specify the destination workspace
+
+========================================================================================
+Practice:  Perform Dynamic Row Level Security based on the Power Query Material
+========================================================================================
+
+
+
+========================================================================================
+Workspace Features [View, FIlter, Settings, Access
+========================================================================================
+
+1. View:
+	List View
+	Lineage View [ Graphical View with Dependencies]
+
+2. Filter
+
+	To see the required dashboards, reports, datasets etc.
+
+3.Settings
+
+	Workspace User Control
+	Workspace Space Settinhg [OneDrive]
+	Workspace Premium Setting
+	Workspace Azure Connection for Data Lake to work on Data Flow etc.
+
+4. Access
+
+	Worksapce is operated with four roles
+
+	a) Admin
+	b) Member
+	c) Contributor
+	d) Viewer
+
+
+
+
+
+
+
+
+=======================================================================================
+Data Refresh, Gateway, Types, Usages, Architecture, Issues etc. [3_VINAYAKA_POWER BI_SERVICE_GATEWAYS.pdf]
+======================================================================================= 
+How do you identify data source for a report at Desktop?
+
+Data Source Settings option
+
+How do you identify data source for a report at cloud?
+
+Datasets--> Settings
+
+How do we refresh report / dashboard data in the power bi service?
+
+Using Gateway
+
+Source Data--> Gateway [On-Premise]---> Dataset Refresh (dynamic (manual)/ scheduled )---> Report / Dashboard refresh
+
+What is Gateway?
+
+Communication component
+
+How many gateways available?
+
+Two
+a) On-Premises Gateway
+b) Cloud Gateway [Azure level]
+
+How many types of On-Premises Gateway available?
+Two types
+
+a) Personal Gateway
+b) Data Gateway
+
+Differences between Personal and Data Gateway?
+
+Personal Mode : One user, Not sharable, Only for Power BI Refresh
+
+Data Gateway: Multiple users, sharable, to refresh Power BI, Power BI Flow, Tabular Model, etc.
+
+What is the purpose of On-Premises Gateway?
+
+It pulls the data from On-Premises sources and push to Power BI Dataset / Dataflow at cloud (app.powerbi.com)
+
+Vinaytech_Business_Excel.xls(my machine )---->                                                        
+
+
+Gateway [On-Premises gateway installed in your machine]
+--It establish connection, it gets data from on-premises and move to Microsoft cloud Dataset when it is triggered(manual/ scheduled)
+
+
+ -->Cloud (app.powerbi.com Microsoft Cloud) Dataset [Refresh]
+-->Report at cloud Refresh
+
+==============================================================================
+
+On-Premises-->PBI Desktop(data)---> Publish-->Cloud
+
+
+On-Premises changed-->PBI Desktop(data) refreshed---> Re-Publish-->Cloud [overwrite with the latest dataset data]
+
+On-Premises changed-->Gateway>Cloud [overwrite with the latest dataset data]
+
+
+Schedule Refresh?
+
+Based on the specified schedule it will run.
+Maximum 8 times a day running.
+Time is either hour or half an hour duration.
+
+What are the settings a dataset will take?
+
+a) Gateway
+b) Data Source Credentials
+c) Parameters
+d) Scheduled refresh
+e) Q & A
+f) Featured Q & A
+g) Endorsement
+
+How scheduled refresh work?
+
+At the specified time it will refresh dataset with data source data.
+So that when we refresh report / dash board, they will refresh.
+
+We did today:
+
+Installed GW
+Added sources
+Added to dataset
+
+On-demand refresh
+Scheduled refresh
+
+Dataset Settings [data source, parameters, Q&A, Featured Q&A, Endorsement etc.]
+
+Refresh history observation
+
+=======================================================================================
+Data Flow [PDF 6_VINAYAKA_POWER BI_SERVICE_EMBED_DATAFLOW_AD_APP_REGISTRATION_DEVELOPER]
+========================================================================================
+What is Data flow?
+
+Dataflow is a reusable model.
+Suitable to create reports and dashboards from this model.
+
+If a company wants to maintain a common data model, then data flow is suitable.
+
+How many ways we can share dataset?
+
+a) PBIX sharing
+b) PBIT sharing [template file sharing]
+c) Power BI Dataset published at service
+d) Power BI Data Flow  [highest priority]
+
+What additional things we have in data flow than the above methods?
+
+a) ML (Machine Learning) model
+b) CDM (Common Data Model) by mapping to standard attributes
+c) Incremental Refresh
+d) Easy of manipulating at Service Level
+e) Store under Azure Data Lake Storage 2
+
+Practical: {follow the PDF)
+
+1.Create a dataflow, Modified Data flow
+2.Verify Incremental Refresh
+3. Verify refresh data flow data using Gateway etc.
+4. Using the Data flow at Power BI Desktop level
+
+=========================================================================================
+Individual Report Properties
+======================================================================================== 
+There are many options to manage
+
+a) Share
+	Sharing the report
+
+b) Favourite
+
+c) Analyze in Excel
+	
+	To browse the data in excel
+d) Delelte
+
+e) Quick Insights
+
+	These are automatic visuals generated by Microsoft from the existing dataset [Import mode dataset is suitable]
+	
+	Maximum 32 visuals generated.
+	
+	You can pin to a dashboard or you can in any other report.
+f) Save  a copy
+
+g) Settings
+	We have many settings.
+	
+	1. Endorsement:
+			Help coworkers working on the part of the report or to consider the report as reference.
+	2. Featured:
+			Prime time report / when you open workspace this will be displayed first.
+
+	3. Allow/ Not Allow Comments	
+	
+	4. Change option from Cross Highlight to Cross Filter
+
+	5. Export Data [ a) Summarized  b) Summarized and Detailed Data]
+
+	6. Filter Pane
+
+		Search Enable / Disable
+		Filter Type change enable / disable
+
+	7. Drill through cross report enabling
+
+	8. Visual Header Show / Hide
+
+	9. Persistent Filter ON / OFF
+
+		ON: Last Browsed State will be saved
+		OFF: Last Browsed State will not be saved
+
+		This is to save the last sliced / filtered settings.
+		So that users can come back and see / resume from the last stopped browsing.
+		If system restarted, power failure, accidental browser close, you went to some other report and came back etc...
+
+		In all these situations, to reserve our last work, persistent filters are helpful.
+
+		etc...
+
+h) View Usage Metrics
+
+	It will show you
+
+	a) Users conected 
+	b) Users connected devices [ Mobile, Web, Desktop]
+	c) Users and Reports Distribution
+	d) Unique Views Per Day
+	e) Total Views
+	d) Ranking of the report etc...
+
+	Advantages:
+
+	a)You can see these statistics by browsing 
+
+	b) You can create a Dash Board using these visuals
+
+i) View Lineage
+
+	Show you the hierarchy from Source Feed to the Report all components and data depedents
+	
+	In our example
+
+	Excel Data-->Power BI Dataset--> Power BI Report --> Power BI Dash Board
+
+---------------------------------------------------------------------------
+What are the exporting ways of Power BI Report?
+
+Power BI report data exporting: PDF and PPT
+---------------------------------------------------------------------------
+What are the exporting ways of Power BI Report Visual and Explain Limitations?
+
+Visual Data Exporting: Csv (max 30000 rows), Excel(max 1,50,000 rows)
+---------------------------------------------------------------------------
+How do we control comments, headers, cross filter, filter pane options?
+
+Go to Report Settings
+---------------------------------------------------------------------------
+
+=======================================================================================
+Dashboard Create, Practice, Properties, and Faqs
+=======================================================================================
+
+What is Dashboard?
+
+	Legacy definition : A single of view high level data presentation in single page regarding a business / subject area.
+	
+	Modern definition: May be a single page / multi page high level data presentation for a particular subject area.
+---------------------------------------------------------------------------
+What exactly a dashboard contain?
+
+	Simple cute visuals and Limited visuals.
+	
+	No slicers and No filters in the dashboard
+---------------------------------------------------------------------------
+Can we take slicers on the dashboard?
+
+No
+
+---------------------------------------------------------------------------
+Can we create a dashboard from multiple datasets?
+
+Yes
+[This is possible if you take multiple report visuals which are constructed from multiple data feeds]
+---------------------------------------------------------------------------
+What kind of visual we usually take on dashboard?
+
+a) KPIs
+b) Cards
+c) Simple charts [line, funnel, bar, pie, bullet etc.]
+d) Maps 
+e) Small sized Tables and Matrices
+etc.
+---------------------------------------------------------------------------
+How does a dashboard data refresh with On-Premises data change?
+
+On-Premises Data--> On-Premises Gateway--> Power BI Dataset--> Power BI Dashboard
+
+---------------------------------------------------------------------------
+What exactly a dashboard contain?
+
+Dashboard contain set of Tiles.
+---------------------------------------------------------------------------
+
+What is Tile?
+
+Tile is rectangle visual with native tile features / a visual from report / a book from report / a report itself  display component.
+
+---------------------------------------------------------------------------
+How many ways we create dashboards? What are inductry recommended dashboard methods?
+
+---------------------------------------------------------------------------
+How Many Ways IT companies creating Power BI Dashboards?
+
+a)Multi page reporting and navigation [ we completed in the project]
+
+Multiple ways
+
+	1.From Bookmarks dashboard
+	2.From system insights and other system generated visuals 
+	3.Multiple visuals from multiple reports
+
+b)Using Dash board Template [ available cloud service]
+---------------------------------------------------------------------------
+How many visuals a dashboard support?
+
+There is no restriction like that, but 9-15 visuals presentation is good for a dash board.
+
+---------------------------------------------------------------------------
+Is there any specification in the layout of dashboard?
+
+KPIs, Gauges, Cards, Pie, Donut etc… on top or side bars. [Quick value representations]
+
+Tables, Matrices, charts, and other similar components [Water fall, Funnel chat etc…] in middle.
+
+Maps, Graphs etc… in the last row.
+---------------------------------------------------------------------------
+
+What is pinning?
+
+Taking visuals or any other relevant information as tile to Dashboards is called as pinning.
+
+---------------------------------------------------------------------------
+Can we share or subscribe a dashboard?
+
+Yes, we can
+---------------------------------------------------------------------------
+Can I pin a slicer to a dashboard?
+No
+---------------------------------------------------------------------------
+Can I pin a page which has a slicer to the dashboard?
+
+Yes, as slicer inside dashboard no difference in the operation.
+---------------------------------------------------------------------------
+Can we download a dashboard and what is the extension of it?
+
+Yes, .Pbix is the extension
+---------------------------------------------------------------------------
+How do we allow Comments and Q & A options on dashboard?
+
+Go to the dashboard, settings specify like below
+---------------------------------------------------------------------------
+When do we go for Tile add and Report Live Page Add?
+
+User interaction provided in Live Page, so we go for it in Dash Board, Whereas Tile is an individual visual.
+---------------------------------------------------------------------------
+What are the objects can be pinned to a dashboard?
+
+a) Visual
+b) Live page
+c) BookMark
+d) Usage Metrics
+e) Native Tiles
+f) Workbook / workbook potion
+etc.
+---------------------------------------------------------------------------
+How do we provide report link to the dashboard to open in a new page?
+
+Dashboard tile Edit Details Report Link
+
+[Go to report, click share, copy and paste that link here]
+---------------------------------------------------------------------------
+How do we know workspace, dashboard, Report, and dataset ID?
+
+Copy and paste the URLS and 
+Group ID is workspaceID
+Dashboard CTID is DashboardID 
+Etc.
+
+2adf3a76-1ccb-4ba2-94ae-27eb087bd7d6/list/dashboards?ctid=e2aa1f92-8ae9-48c0-8aa8-894fb201ce24
+
+2adf3a76-1ccb-4ba2-94ae-27eb087bd7d6/dashboards/48db204d-9396-418e-8cd7-128b093332fd?ctid=e2aa1f92-8ae9-48c0-8aa8-894fb201ce24
+
+2adf3a76-1ccb-4ba2-94ae-27eb087bd7d6/reports/36821893-f137-4c19-9418-ba03fec479fa/ReportSection5153b9202a06836e2ee2?ctid=e2aa1f92-8ae9-48c0-8aa8-894fb201ce24
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+There are many ways of dash board presentation.
+
+Trainer observed the below ways
+
+Type 1: Dashboard with Native tiles and heterogeneous information [the below example]
+
+Type 2: Dashboard with a report single page followed by actions [refer to project doc practice]
+
+Type 3: Dashboard with a report multiple pages as multiple tiles [refer to project doc practice]
+
+Type 4: Dashboard with multiple tiles from multiple report pages [refer to project doc practice]
+
+Type 5: Dash board with a report / page with Usage Metrics information
+
+Type 6: Dash board with only book marks pinning.
+
+Note: The above all types explained in the class room [watch the video]
+=======================================================================================
+Dashboard Properties
+=======================================================================================
+
+File menu
+=======
+a) Save a copy : Keeping in your workspace one more copy
+
+b)Performance Inspector:
+
+		The dashboard network latency time in ms (milli seconds).
+		If it says (considered) good, we can go ahead with usgae.
+		If it says (considered) bad, we need to look at the performance of each visual to optimize
+
+c) Print Dashboard
+
+d) Settings
+		Name:
+		Owner:
+
+		Featured:  
+			You can make a dashboard as featured, so that it would open first.
+			But, this will be done by tenant admin.
+
+		Q & A: Allow / not allow Q& A on the dashboard
+		
+		Comments: Allow / not allow comments on the dashboard
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Faq:
+	How do we make dashboard allowing Q &  A and Comments option?
+
+
+Ans:	Dashboard-->Settings
+ 
+----------------------------------------------------------------------------------------------------------------------------------------------
+Share
+		
+	Dynamic / adhoc / immediate share of dashboard
+
+Chat in Teams
+
+	Recently added to discuss in Microsoft Teams
+
+Comment
+
+	To write comment
+
+SubScribe
+
+	If the report is non RLS, it can be subscribed to other users also.
+	
+	Subscription is the process of delivering the report in the scheduled time to the specified users.
+
+Edit
+
+	a) Allow tile adding
+	b) Allow Dashboard theme adding
+	c) Allow to create mobile view of a dashboard
+
+Ellipse options
+
+	a) Related content
+
+		Displays the reports and datasets used to construct this dashboard
+
+
+	b) View-->Lineage
+
+		Displayes Sources--> Power BI Datasets-->Power Bi Reports-->Power BI Dshboards in graphical way
+
+
+	c) Usage Metrics
+
+		Users, Platforms, views, days etc.
+
+	d) Set as Fetured
+
+Refresh
+
+	When the data model has been chaged, refreshing visual will refresh visuals with latest data
+
+===================================================================
+Dashboard Tile Properties
+=====================================================================
+Native Tile and Manual created tile has different properties.
+
+Manual Tile properties
+
+a) Save a copy
+
+b) Copy tile as image
+
+c) Add comments to the tile
+
+d) Go to the port
+
+e) Open in Focus mode
+
+f) Export to .csv
+
+g) Delete tile
+
+h) View Insights
+
+i) Manage ALERTS***
+
+	Alerts are user defined threshold specififed on the tile.
+	When it reaches
+
+	a) Send a notification to the user [so that he can see in this account notification after connecting to PBI Service]
+	b) Send an email intimation to the users
+
+	Ex:
+	If the number of students more than 154, then I need a notification  and an email
+========================================================================================
+
+Non RLS report--> Can be subscribed to others in the organization
+	During subscription, it prompt for users
+RLS report--> Subscribed to those who are assigned for RLS
+	During subscription, it will not prompt, but the RLS users it will take
+	and deliver the reports
+
+Insight: Automatic visual generated by Microsoft.
+	
+	MS will generate 32 insights maximum.
+	You can use in the report / you can ping to dashboard.
+	
+	Note: For RLS reports, insights do not work.
+		Insights work only for Import mode reports
+
+
+Workspace users control: Workspace settings
+Dataset users control: Dataset-->Manage Permission
+App space control: Go to app and security
+
+Row data control: RLS : Row Level Security: Data set-->Security
+
+
+Modern topic: App space [2017 mid]
+
+Prior to App space, to share work, to colloborate work, we are having Content Pack mechanism.  
+=======================================================================================
+Content Pack: [ Legacy method of work sharing and colloborating]    Modern method : APPSPACE [alreay completed]
+=======================================================================================	
+	Packing required content [ required reports / dashbaords / datasets] to share, to colloborate with users / team.
+	
+	Content pack at latest versions limited to MyWorkspace only.
+
+	There are two types of contect packs
+
+	a) Service Content Pack: Created by system and shared across organizations
+
+	b) Organizational Content Pack: Created by an organization user and shared with in the organization
+
+	What we create is organizational content pack and will be sharable
+
+	My workspace--> Settings--> Create Content pack--> Choose Dashboards/ reports/ datasets etc.
+
+	Connect to app.powerbi.com with other user account, and get data--> organizational content pack-->choose it
+
+
+What are the differences between Content Pack and New Workspace expereicne?
+
+Content Pack
+---------------------------------------------------------------
+Content pack has "limited capability" to colloborate and share work
+Latest versions this is limited to Myworkspace
+All artifacts will come to the respective user
+
+New Workspace
+---------------------------------------------------------
+New Workspace has "more capability" to colloborate and share
+Latest versions this is only recommended [template workspace is suitable to share out side of organization also]
+Required artifact other user can save in his area
+--------------------------------------------------------- 
+Can we unselect the reports when a respective dashboard is selected at content pack?
+
+Not possible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
