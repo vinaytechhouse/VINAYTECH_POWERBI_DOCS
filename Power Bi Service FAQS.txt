@@ -258,7 +258,7 @@ On-Premises changed-->Gateway>Cloud [overwrite with the latest dataset data]
 Schedule Refresh?
 
 Based on the specified schedule it will run.
-Maximum 8 times a day running.
+Maximum 8 times a day running in Pro account.
 Time is either hour or half an hour duration.
 
 What are the settings a dataset will take?
@@ -289,6 +289,23 @@ Dataset Settings [data source, parameters, Q&A, Featured Q&A, Endorsement etc.]
 
 Refresh history observation
 
+
+How do we delete a data source in the gateway?
+
+Two ways:
+
+a) REST API command way:
+
+DELETE https://api.powerbi.com/v1.0/myorg/gateways/{gatewayId}/datasources/{datasourceId}
+
+DELETE https://api.powerbi.com/v1.0/myorg/gateways/cb295b78-4adb-4cb4-89e7-45ebceccb6b2/datasources/18857f8a-8d8c-417b-afe7-6ceab1275fa7
+
+b) Graphical Way
+
+Data Source, at end, click Ellipse, Remove
+
+
+
 =======================================================================================
 Data Flow [PDF 6_VINAYAKA_POWER BI_SERVICE_EMBED_DATAFLOW_AD_APP_REGISTRATION_DEVELOPER]
 ========================================================================================
@@ -298,14 +315,14 @@ Dataflow is a reusable model.
 Suitable to create reports and dashboards from this model.
 
 If a company wants to maintain a common data model, then data flow is suitable.
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 How many ways we can share dataset?
 
 a) PBIX sharing
 b) PBIT sharing [template file sharing]
 c) Power BI Dataset published at service
 d) Power BI Data Flow  [highest priority]
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 What additional things we have in data flow than the above methods?
 
 a) ML (Machine Learning) model
@@ -467,7 +484,7 @@ Dashboard contain set of Tiles.
 
 What is Tile?
 
-Tile is rectangle visual with native tile features / a visual from report / a book from report / a report itself  display component.
+Tile is rectangle visual with native tile features / a visual from report / a bookmark from report / a report itself  display component.
 
 ---------------------------------------------------------------------------
 How many ways we create dashboards? What are inductry recommended dashboard methods?
